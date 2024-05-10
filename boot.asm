@@ -3,7 +3,7 @@
 
 MOV AH, 0x00        ; set video mode
 MOV AL, 0x03        ; text mode 80x25 16 colors 8 pages
-INT 10h
+INT 10h             ; call BIOS interrupt
 
 MOV SI, HelloText    ; SI = HelloText's address
 CALL PrintText       ; call PrintText function
@@ -16,7 +16,7 @@ MOV AH, 0x00        ; set AH register for read mode
 
 INT 0x16            ; call BIOS interrupt
 
-CMP AL, 13            ; if readed key is (Return / Enter) 
+CMP AL, 13          ; if readed key is (Return / Enter) 
 JE  CrLf            ; call new line function
 
 JMP Continue        ; continue to print

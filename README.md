@@ -13,6 +13,7 @@ You can `make` to build or `make run` to build and start with qemu if installed.
 # See also
 1. https://en.wikipedia.org/wiki/BIOS_interrupt_call
 2. https://en.wikipedia.org/wiki/INT_10H
+3. https://en.wikipedia.org/wiki/INT_16H
 
 # License
 The Unlicense. Feel free to use or change it how you need.
