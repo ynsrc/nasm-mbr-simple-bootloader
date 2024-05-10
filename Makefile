@@ -7,8 +7,8 @@ build:
 run: build
 	qemu-system-x86_64 -drive format=raw,file=boot/boot.bin
 
-iso:
+iso: build
 	mkisofs -o bootloader.iso -b boot.bin -no-emul-boot boot
 
-isorun: build
+isorun: iso
 	qemu-system-x86_64 -boot d -cdrom bootloader.iso -m 512
